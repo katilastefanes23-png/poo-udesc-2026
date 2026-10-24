@@ -1,7 +1,7 @@
 package exercicio1oo.classes;
 
 class TesteLivro {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Livro livro = new Livro();
 
         livro.titulo = "Clube da Luta";
