@@ -1,9 +1,9 @@
 package exercicio4oo.classes;
 
 public class Livro {
-    private  String titulo;
-    private  String autor;
-    private  String genero;
+    private String titulo;
+    private String autor;
+    private String genero;
     private boolean emprestado;
 
     public String getTitulo() {
@@ -36,5 +36,17 @@ public class Livro {
 
     public void setEmprestado(boolean emprestado) {
         this.emprestado = emprestado;
+    }
+
+    public void emprestar() {
+        this.emprestado = true;
+    }
+
+    public void devolver() {
+        this.emprestado = false;
+    }
+
+    public boolean verificarDisponibilidade() {
+        return !this.emprestado;
     }
 }
