@@ -1,7 +1,9 @@
 package exercicio4oo.classes;
 
 public class Carro {
-    private  String modelo;
+    private static final double VARIACAO_VELOCIDADE = 10.0;
+
+    private String modelo;
     private String marca;
     private int ano;
     private double velocidade;
@@ -36,5 +38,18 @@ public class Carro {
 
     public void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
+    }
+
+    public void acelerar() {
+        this.velocidade += VARIACAO_VELOCIDADE;
+    }
+
+    public void frear() {
+        this.velocidade -= VARIACAO_VELOCIDADE;
+    }
+
+    public void imprimirVelocidade() {
+        System.out.printf("Carro: %s %s (%d) | Velocidade atual: %.1f km/h%n",
+                this.marca, this.modelo, this.ano, this.velocidade);
     }
 }
