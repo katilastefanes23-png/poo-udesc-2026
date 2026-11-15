@@ -1,19 +1,18 @@
-package testes;
+package exercicio4oo.testes;
 
-import exercicios200.classes.Retangulo;
+import exercicio4oo.classes.Retangulo;
 
 public class TestaRetangulo {
+    private static final double LARGURA_PADRAO = 5.0;
+    private static final double ALTURA_PADRAO = 3.0;
+
     public static void main(String[] args) {
         Retangulo retangulo = new Retangulo();
+        retangulo.setLargura(LARGURA_PADRAO);
+        retangulo.setAltura(ALTURA_PADRAO);
 
-        // Atribuindo valores aos atributos
-        retangulo.largura = 5.0;
-        retangulo.altura = 3.0;
-
-        // Testando os atributos (lendo e imprimindo)
-        System.out.println("--- Dados do Retângulo ---");
-        System.out.println("Largura: " + retangulo.largura);
-        System.out.println("Altura: " + retangulo.altura);
-
+        System.out.printf("Largura: %.2f%n", retangulo.getLargura());
+        System.out.printf("Altura: %.2f%n", retangulo.getAltura());
+        System.out.printf("Área do retângulo: %.2f%n", retangulo.calcularArea());
     }
 }

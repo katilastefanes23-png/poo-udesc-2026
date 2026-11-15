@@ -1,6 +1,6 @@
-package exercicios200.testes;
+package exercicio2oo.testes;
 
-import exercicios200.classes.Retangulo;
+import exercicio2oo.classes.Retangulo;
 
 public class TestaRetangulo {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package testes;
 
-import exercicios200.classes.Carro;
+import exercicio2oo.classes.Carro;
 
 public class TesteCarro {
     public static void main(String[] args) {

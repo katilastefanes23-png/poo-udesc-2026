@@ -1,6 +1,6 @@
-package exercicios200.testes;
+package exercicio2oo.testes;
 
-import exercicios200.classes.Livro;
+import exercicio2oo.classes.Livro;
 
 public class TestaLivro {
     public static void main(String[] args) {

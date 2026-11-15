@@ -1,11 +1,14 @@
-package exercio300;
+package exercicio4oo.classes;
 
 public class Aluno {
-  private  String matricula;
-  private  String nome;
-  private  int idade;
+  private static final double MEDIA_APROVACAO = 7.0;
+  private static final double QUANTIDADE_NOTAS = 4.0;
+
+  private String matricula;
+  private String nome;
+  private int idade;
   private int nota1;
-  private  int nota2;
+  private int nota2;
   private int nota3;
   private int nota4;
 
@@ -33,7 +36,7 @@ public class Aluno {
     this.idade = idade;
   }
 
-  public double getNota1() {
+  public int getNota1() {
     return this.nota1;
   }
 
@@ -49,7 +52,7 @@ public class Aluno {
     this.nota2 = nota2;
   }
 
-  public double getNota3() {
+  public int getNota3() {
     return this.nota3;
   }
 
@@ -63,5 +66,15 @@ public class Aluno {
 
   public void setNota4(int nota4) {
     this.nota4 = nota4;
+  }
+
+  public double calcularMedia() {
+    return (this.nota1 + this.nota2 + this.nota3 + this.nota4) / QUANTIDADE_NOTAS;
+  }
+
+  public void imprimirSituacao() {
+    double media = calcularMedia();
+    String situacao = (media >= MEDIA_APROVACAO) ? "Aprovado" : "Reprovado";
+    System.out.printf("Aluno: %s | Média: %.2f | Situação: %s%n", this.nome, media, situacao);
   }
 }
