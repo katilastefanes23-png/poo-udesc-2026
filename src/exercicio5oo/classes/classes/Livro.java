@@ -1,10 +1,20 @@
-package exercicio5oo.classes.classes;
+package exercicio5oo.classes;
 
 public class Livro {
     private String titulo;
     private String autor;
     private String genero;
     private boolean emprestado;
+
+    public Livro() {
+    }
+
+    public Livro(String titulo, String autor, String genero, boolean emprestado) {
+        this.setTitulo(titulo);
+        this.setAutor(autor);
+        this.setGenero(genero);
+        this.setEmprestado(emprestado);
+    }
 
     public String getTitulo() {
         return this.titulo;
@@ -39,14 +49,24 @@ public class Livro {
     }
 
     public void emprestar() {
-        this.emprestado = true;
+        if (!this.emprestado) {
+            this.emprestado = true;
+        }
     }
 
     public void devolver() {
-        this.emprestado = false;
+        if (this.emprestado) {
+            this.emprestado = false;
+        }
     }
 
     public boolean verificarDisponibilidade() {
         return !this.emprestado;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Livro [titulo=%s, autor=%s, genero=%s, emprestado=%b]",
+                this.titulo, this.autor, this.genero, this.emprestado);
     }
 }
