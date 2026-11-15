@@ -6,7 +6,7 @@ public class TestaAluno {
      private static final String MATRICULA_KATILA = "14100033";
      private static final String NOME_KATILA = "Kátila Thaiana Stefanes";
      private static final int IDADE_KATILA = 30;
-     private static final int NOTA_1 = 10;
+     private static final int NOTA_1 = 9;
      private static final int NOTA_2 = 10;
      private static final int NOTA_3 = 9;
      private static final int NOTA_4 = 10;
