@@ -1,16 +1,17 @@
-package testes;
+package exercicio4oo.testes;
 
-import exercicio2oo.classes.Circulo;
+import exercicio4oo.classes.Circulo;
 
 public class TestaCirculo {
+    private static final double RAIO_PADRAO = 4.0;
+
     public static void main(String[] args) {
         Circulo circulo = new Circulo();
+        circulo.setRaio(RAIO_PADRAO);
 
-        // Atribuindo valor ao atributo
-        circulo.raio = 4.5;
-
-        // Testando o atributo
-        System.out.println("--- Dados do Círculo ---");
-        System.out.println("Raio: " + circulo.raio);
+        System.out.printf("Raio: %.2f%n", circulo.getRaio());
+        System.out.printf("Diâmetro: %.2f%n", circulo.calcularDiametro());
+        System.out.printf("Perímetro: %.2f%n", circulo.calcularPerimetro());
+        System.out.printf("Área: %.2f%n", circulo.calcularArea());
     }
 }
