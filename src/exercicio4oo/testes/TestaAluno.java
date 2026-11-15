@@ -1,4 +1,4 @@
-package testes;
+package exercicio4oo.testes;
 
 import exercicio4oo.classes.Aluno;
 

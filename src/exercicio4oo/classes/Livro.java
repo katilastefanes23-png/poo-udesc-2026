@@ -1,4 +1,4 @@
-package exercicio4oo;
+package exercicio4oo.classes;
 
 public class Livro {
     private  String titulo;

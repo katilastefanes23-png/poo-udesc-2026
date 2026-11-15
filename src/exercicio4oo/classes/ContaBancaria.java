@@ -1,9 +1,9 @@
-package exercicio4oo;
+package exercicio4oo.classes;
 
 public class ContaBancaria {
-private  String numeroConta;
-    private  String titular;
-    private  double saldo;
+    private String numeroConta;
+    private String titular;
+    private double saldo;
 
     public String getNumeroConta() {
         return this.numeroConta;
@@ -27,5 +27,18 @@ private  String numeroConta;
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public void depositar(double valor) {
+        this.saldo += valor;
+    }
+
+    public void sacar(double valor) {
+        this.saldo -= valor;
+    }
+
+    public void imprimirSaldo() {
+        System.out.printf("Conta: %s | Titular: %s | Saldo atual: R$ %.2f%n",
+                this.numeroConta, this.titular, this.saldo);
     }
 }
